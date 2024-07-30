@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/whiteMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/whiteradius"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintHeight_percent="0.25"
+        app:circularflow_defaultRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/our"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardsemibold"
+        android:text="@string/ourRegion"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardsemibold"
+        android:text="@string/market"
+        android:textColor="@color/jisi"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@id/our"
+        app:layout_constraintTop_toTopOf="@id/our" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardbold"
+        android:text="@string/Jisi"
+        android:textColor="@color/jisi"
+        android:textSize="60sp"
+        app:layout_constraintStart_toStartOf="@id/our"
+        app:layout_constraintTop_toBottomOf="@id/our" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/market"
+        android:elevation="-1dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <android.widget.Button
+        android:id="@+id/phLogIn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.7"
+        android:background="@drawable/phlogin"
+        android:stateListAnimator="@null"
+        android:text="@string/PhNumForLogIn"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="@id/whiteMenu"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/semi_classic"/>
+
+    <android.widget.Button
+        android:id="@+id/signInBtn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.7"
+        android:background="@drawable/signinbtn"
+        android:fontFamily="@font/pretendardsemibold"
+        android:stateListAnimator="@null"
+        android:text="@string/signIn"
+        android:textSize="@dimen/semi_classic"
+        app:layout_constraintTop_toTopOf="@id/phLogIn"
+        android:layout_marginTop="65dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

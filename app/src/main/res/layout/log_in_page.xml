@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInPage">
+
+    <FrameLayout
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/phNumLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phnumlogin"
+        android:fontFamily="@font/pretendardbold"
+        app:layout_constraintStart_toStartOf="@id/numInput"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="130dp"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/phNumLogInBelow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phnumloginbelow"
+        android:fontFamily="@font/pretendard"
+        app:layout_constraintTop_toBottomOf="@+id/phNumLogIn"
+        app:layout_constraintStart_toStartOf="@+id/phNumLogIn"
+        android:textColor="#797979"/>
+
+    <EditText
+        android:id="@+id/numInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.85"
+        android:hint="전화번호 입력"
+        android:fontFamily="@font/pretendardsemibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phNumLogInBelow"
+        android:singleLine="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input"
+        android:paddingStart="20dp"
+        android:maxLength="13"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.85"
+        android:hint="비밀번호 입력"
+        android:background="@drawable/input"
+        app:layout_constraintStart_toStartOf="@id/numInput"
+        app:layout_constraintTop_toBottomOf="@+id/numInput"
+        android:layout_marginTop="15dp"
+        android:paddingStart="20dp"
+        android:fontFamily="@font/pretendardsemibold"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone" />
+
+    <android.widget.Button
+        android:id="@+id/logInBtn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintWidth_percent="0.8"
+        android:text="@string/logIn"
+        android:fontFamily="@font/pretendardsemibold"
+        android:background="@drawable/loginbtn"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="25dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
