@@ -16,13 +16,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/telicon"
+        app:layout_constraintStart_toStartOf="@id/phNumLogIn"
+        app:layout_constraintBottom_toTopOf="@id/phNumLogIn"
+        android:layout_marginBottom="10dp"/>
+
     <TextView
         android:id="@+id/phNumLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/phnumlogin"
         android:fontFamily="@font/pretendardbold"
-        app:layout_constraintStart_toStartOf="@id/numInput"
+        app:layout_constraintStart_toStartOf="@id/numInputLayout"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="130dp"
         android:textSize="25sp"/>
@@ -37,38 +45,83 @@
         app:layout_constraintStart_toStartOf="@+id/phNumLogIn"
         android:textColor="#797979"/>
 
-    <EditText
-        android:id="@+id/numInput"
+<!--    <EditText-->
+<!--        android:id="@+id/numInput"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintWidth_percent="0.85"-->
+<!--        android:hint="전화번호 입력"-->
+<!--        android:fontFamily="@font/pretendardsemibold"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/phNumLogInBelow"-->
+<!--        android:singleLine="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@drawable/input"-->
+<!--        android:paddingStart="20dp"-->
+<!--        android:maxLength="13"-->
+<!--        android:inputType="phone"/>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/numInputLayout"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         app:layout_constraintWidth_percent="0.85"
-        android:hint="전화번호 입력"
-        android:fontFamily="@font/pretendardsemibold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phNumLogInBelow"
-        android:singleLine="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/input"
-        android:paddingStart="20dp"
-        android:maxLength="13"
-        android:inputType="phone"/>
+        app:hintEnabled="false">
 
-    <EditText
-        android:id="@+id/passwordInput"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/numInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintWidth_percent="0.85"
+            android:hint="전화번호 입력"
+            android:fontFamily="@font/pretendardsemibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phNumLogInBelow"
+            android:singleLine="true"
+            android:background="@drawable/input"
+            android:paddingStart="20dp"
+            android:maxLength="13"
+            android:inputType="phone"
+            android:digits="0123456789-"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:cursorVisible="true"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         app:layout_constraintWidth_percent="0.85"
-        android:hint="비밀번호 입력"
-        android:background="@drawable/input"
-        app:layout_constraintStart_toStartOf="@id/numInput"
-        app:layout_constraintTop_toBottomOf="@+id/numInput"
-        android:layout_marginTop="15dp"
-        android:paddingStart="20dp"
-        android:fontFamily="@font/pretendardsemibold"
-        android:singleLine="true"
-        android:inputType="textPassword"
-        android:imeOptions="actionDone" />
+        app:layout_constraintStart_toStartOf="@id/numInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/numInputLayout"
+        android:layout_marginTop="10dp"
+        app:passwordToggleEnabled="true"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:passwordToggleEnabled="true"
+            android:background="@drawable/input"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:hint="비밀번호 입력"
+            android:fontFamily="@font/pretendardsemibold"
+            android:digits="0123456789qwertzuiopasdfghjklyxcvbnm?!_"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSelectHandle="@drawable/handler_color"
+            android:textSelectHandleRight="@drawable/handler_color"
+            android:textSelectHandleLeft="@drawable/handler_color"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <android.widget.Button
         android:id="@+id/logInBtn"
@@ -77,11 +130,12 @@
         app:layout_constraintWidth_percent="0.8"
         android:text="@string/logIn"
         android:fontFamily="@font/pretendardsemibold"
-        android:background="@drawable/loginbtn"
+        android:background="@drawable/phlogin"
+        android:stateListAnimator="@null"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="25dp" />
+        android:layout_marginBottom="25dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

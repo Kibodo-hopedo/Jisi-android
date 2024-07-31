@@ -38,7 +38,7 @@ android {
     }
     dependencies {
         implementation("androidx.fragment:fragment-ktx:1.4.1")
-        implementation("com.squareup.okhttp3:okhttp:4.9.2")
+        implementation("com.google.android.material:material:1.2.0")
     }
 }
 

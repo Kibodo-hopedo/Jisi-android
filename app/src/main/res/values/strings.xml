@@ -12,4 +12,6 @@
     <string name="phnumlogin">전화번호 로그인</string>
     <string name="phnumloginbelow">전화번호를 통하여 로그인 합니다</string>
     <string name="go">진행하기</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

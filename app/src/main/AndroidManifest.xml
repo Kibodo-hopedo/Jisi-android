@@ -16,33 +16,38 @@
         tools:targetApi="31">
         <activity
             android:name=".SignInSuccess"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".LogInSuccess"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SplashActivity"
             android:exported="true"
-            android:theme="@style/Base.Theme.JisiLogin">
+            android:theme="@style/Base.Theme.JisiLogin"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".SignInPage"
             android:exported="false"
-            android:theme="@style/Base.Theme.JisiLogin" />
+            android:theme="@style/Base.Theme.JisiLogin"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".LogInPage"
             android:exported="false"
             android:theme="@style/Base.Theme.JisiLogin"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:theme="@style/Base.Theme.JisiLogin" />
+            android:theme="@style/Base.Theme.JisiLogin"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

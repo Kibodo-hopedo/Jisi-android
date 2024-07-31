@@ -30,13 +30,13 @@ class LogInPage : AppCompatActivity() {
         }
         val logToPhone : Button = binding.logInBtn
         val id : EditText = binding.numInput
-        val password : EditText = binding.passwordInput
+        val password = binding.passwordInput
         val backLayout : FrameLayout = binding.back
         supportFragmentManager.commit{
             replace(backLayout.id, back_button())
         }
         logToPhone.setOnClickListener {
-            if (id.text.length > 5 && password.text.length > 7){
+            if (id.text.length > 5 && password.text.toString().length > 7){
                 val phoneNumberPage = Intent(this, LogInSuccess::class.java)
                 startActivity(phoneNumberPage)
                 finish()
