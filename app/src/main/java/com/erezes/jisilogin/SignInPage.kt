@@ -13,6 +13,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.commit
 import back_button
 import com.erezes.jisilogin.databinding.SignInPageBinding
@@ -33,18 +34,31 @@ class SignInPage : AppCompatActivity() {
             replace(binding.back.id, back_button())
         }
         binding.phInput.addTextChangedListener(PhoneNumberFormattingTextWatcher("KR"))
-        val phInputKt : EditText = binding.phInput
-        phInputKt.setOnKeyListener { _, keyCode, _ ->
+        val phInput : EditText = binding.phInput
+        phInput.setOnKeyListener { _, keyCode, _ ->
             if (keyCode == KeyEvent.KEYCODE_ENTER) {
                 val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                 inputMethodManager.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
             }
             return@setOnKeyListener false
         }
-
+        binding.phInput.addTextChangedListener{
+            if (phInput.length() >= 13){
+                supportFragmentManager.commit{
+                    val wt = supportFragmentManager.findFragmentByTag("wt")
+                    if (wt != null) {
+                        remove(wt)
+                    }
+                }
+            }
+        }
         binding.goBtn.setOnClickListener {
-            if (phInputKt.length() >= 13) {
+            if (phInput.length() >= 13) {
                 startActivity(Intent(this, SignInSuccess::class.java))
+            }else{
+                supportFragmentManager.commit{
+                    replace(binding.wrongText.id, wrong_text(), "wt")
+                }
             }
         }
     }

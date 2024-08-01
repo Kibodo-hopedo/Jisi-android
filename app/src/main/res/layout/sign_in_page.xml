@@ -15,6 +15,14 @@
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+    
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/telicon"
+        app:layout_constraintStart_toStartOf="@id/phNumSignIn"
+        app:layout_constraintBottom_toTopOf="@id/phNumSignIn"
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:id="@+id/phNumSignIn"
@@ -42,7 +50,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         app:layout_constraintWidth_percent="0.85"
-        android:hint="555) 123-4567"
+        android:hint="010-1234-5678"
         android:fontFamily="@font/pretendardlight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +60,20 @@
         android:background="@drawable/input"
         android:paddingStart="20dp"
         android:maxLength="13"
-        android:inputType="phone"/>
+        android:inputType="phone"
+        android:textColorHighlight="#8BDAB8"
+        android:textSelectHandleLeft="@drawable/handler_color"
+        android:textSelectHandleRight="@drawable/handler_color"
+        android:textSelectHandle="@drawable/handler_color"/>
+
+    <FrameLayout
+        android:id="@+id/wrong_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/phInput"
+        app:layout_constraintTop_toBottomOf="@id/phInput"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"/>
 
     <android.widget.Button
         android:id="@+id/goBtn"
@@ -61,7 +82,8 @@
         app:layout_constraintWidth_percent="0.8"
         android:text="@string/go"
         android:fontFamily="@font/pretendardsemibold"
-        android:background="@drawable/loginbtn"
+        android:background="@drawable/phlogin"
+        android:stateListAnimator="@null"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
