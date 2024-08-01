@@ -60,7 +60,11 @@
         android:background="@drawable/input"
         android:paddingStart="20dp"
         android:maxLength="13"
-        android:inputType="phone"/>
+        android:inputType="phone"
+        android:textColorHighlight="#8BDAB8"
+        android:textSelectHandleLeft="@drawable/handler_color"
+        android:textSelectHandleRight="@drawable/handler_color"
+        android:textSelectHandle="@drawable/handler_color"/>
 
     <FrameLayout
         android:id="@+id/wrong_text"

@@ -89,8 +89,12 @@
             android:maxLength="13"
             android:inputType="phone"
             android:digits="0123456789-"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:cursorVisible="true"/>
+            android:textCursorDrawable="@color/black"
+            android:cursorVisible="true"
+            android:textColorHighlight="#8BDAB8"
+            android:textSelectHandleLeft="@drawable/handler_color"
+            android:textSelectHandleRight="@drawable/handler_color"
+            android:textSelectHandle="@drawable/handler_color"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -116,10 +120,12 @@
             android:fontFamily="@font/pretendardsemibold"
             android:digits="0123456789qwertzuiopasdfghjklyxcvbnm?!_"
             android:cursorVisible="true"
-            android:textCursorDrawable="@drawable/cursor_color"
-            android:textSelectHandle="@drawable/handler_color"
+            android:textCursorDrawable="@color/black"
+            android:maxLength="15"
+            android:textColorHighlight="#8BDAB8"
+            android:textSelectHandleLeft="@drawable/handler_color"
             android:textSelectHandleRight="@drawable/handler_color"
-            android:textSelectHandleLeft="@drawable/handler_color"/>
+            android:textSelectHandle="@drawable/handler_color"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
