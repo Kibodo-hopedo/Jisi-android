@@ -2,5 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="jisi">#57BC90</color>
+    <color name="jisi">#FF57BC90</color>
+    <color name="gray">#FFA5A5A5</color>
 </resources>
